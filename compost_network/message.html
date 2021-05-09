@@ -1,0 +1,966 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <title> Welcome </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="landing page, website design" />
+
+  <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+<script src="moment.js"></script>
+	<script src="livestamp.js"></script>
+
+
+
+<script>
+
+//check if session is set and prevent Direct Access to the App.
+
+var userid_sess_data1 = localStorage.getItem('useridsessdata');
+
+if (userid_sess_data1 == null || userid_sess_data1 == undefined) {
+
+  alert('You Must Login To Access this Page');
+window.location='login.html';
+//return false;
+}
+
+
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+
+<script>
+$(document).ready(function(){
+
+
+var userid_sess_data = localStorage.getItem('useridsessdata');
+var fullname_sess_data = localStorage.getItem('fullnamesessdata');
+var username_sess_data = localStorage.getItem('usernamesessdata');
+var email_sess_data = localStorage.getItem('emailsessdata');
+var photo_sess_data = localStorage.getItem('photosessdata');
+var points_sess_data = localStorage.getItem('pointssessdata');
+var levels_sess_data = localStorage.getItem('levelssessdata');
+
+
+
+var title_header = localStorage.getItem('titleheader');
+var title_footer = localStorage.getItem('titlefooter');
+var appcolor = localStorage.getItem('appcolor');
+var posts = localStorage.getItem('posts');
+var help = localStorage.getItem('help');
+
+//alert(fullname_sess_data);
+
+
+var rec = "<span>" +
+"<img src=" + photo_sess_data +"  style='text-align:left;border-radius:50%;width:60px;max-width:60px;height:60px;max-height:60px;border-style: solid; border-width:3px; border-color: #ec5574;'>" +
+ "</span>";
+
+$('.myd_photo_sess').html(rec);
+$('.myd_fullname_sess').html(fullname_sess_data);
+$('.myd_userid_sess').html(userid_sess_data);
+$('.myd_username_sess').html(username_sess_data);
+
+
+//$('#myd_userid_sess_value').val(userid_sess_data).value;
+//$('#myd_userid_sess_id').html(userid_sess_data);
+
+
+$('.myd_title_header').html(title_header);
+$('.myd_title_footer').html(title_footer);
+
+
+});
+
+</script>
+
+
+
+<style>
+
+
+/*ensure that category button does not jam about us or product section when on mobile ends here.*/
+
+
+
+
+.section_padding {
+padding: 60px 40px;
+}
+
+.imagelogo_li_remove {
+list-style-type: none;
+margin: 0;
+ padding: 0;
+}
+
+.imagelogo_data{
+ width:120px;
+ height:80px;
+}
+
+
+
+  .navbar {
+    letter-spacing: 1px;
+    font-size: 14px;
+    border-radius: 0;
+    margin-bottom: 0;
+   background-color: #ec5574;
+
+    z-index: 9999;
+    border: 0;
+    font-family: comic sans ms;
+//color:white;
+  }
+
+
+
+  
+.navbar-toggle {
+background-color:orange;
+  }
+
+.navgate {
+padding:16px;color:white;
+
+}
+
+.navgate:hover{
+ color: black;
+ background-color: orange;
+
+}
+
+
+.navbar-header{
+height:60px;
+}
+
+.navbar-header-collapse-color {
+background:white;
+}
+
+.dropdown_bgcolor{
+
+background: #ec5574;
+color:white;
+}
+
+.dropdown_dashedline{
+ border-bottom: 2px dotted white;
+}
+
+.navgate101:hover{
+background:purple;
+color:white;
+
+}
+
+
+
+
+
+
+.creator_imagelogo_data{
+ width:60px;
+ height:60px;
+}
+
+/* make modal appear at center of the page */
+.modal-appear-center {
+margin-top: 25%;
+//width:40%;
+}
+
+
+/* make modal appear at center of the page */
+.modal-appear-center1 {
+margin-top: 15%;
+//width:40%;
+}
+
+
+.modal_head_color{
+background-color: #ec5574;
+padding: 6px;
+color:white;
+}
+
+
+.modal_footer_color{
+background-color: #ec5574;
+padding: 6px;
+color:white;
+}
+
+/*
+modal_mobile_resize 
+
+@media screen and (max-width: 600px) {
+  .modal_mobile_resize {
+    width: 100%;
+    margin-top: 15%;
+  }
+}
+
+
+*/
+
+
+
+.btn_copyright{
+//background: orange;
+color:orange;
+//padding:2px;
+font-weight:200;
+}
+
+
+.btn_copyright:hover {
+background: black;
+color:pink;
+font-weight:700;
+}
+
+
+
+
+/* footer */
+
+
+  .navbar_footer {
+letter-spacing: 1px;
+    font-size: 14px;
+    border-radius: 0;
+    margin-bottom: 0;
+    //background-color: #ec5574;
+    color:white;
+    padding:20px;
+    border: 0;
+    font-family: comic sans ms;
+  }
+
+
+.footer_bgcolor{
+background: black;
+}
+
+.footer_text1{
+color:white;
+font-size:20px;
+border:none;
+cursor:pointer;
+}
+
+.footer_text2{
+color:grey;
+font-size:14px;
+border:none;
+cursor:pointer;
+}
+
+.footer_text1:hover{
+color:grey;
+}
+
+
+.footer_text2:hover{
+color:orange;
+}
+
+
+.footer_dashedline{
+ border-top: 1px dashed white;
+}
+
+
+
+.left_shifting{
+
+width:40%;
+}
+
+@media screen and (max-width: 768px) {
+.left-column-all {
+width:100%;
+
+}
+
+.home_resize_padding {
+padding-top:100px;
+}
+
+
+}
+
+
+
+@media screen and (max-width: 600px) {
+.left-column-all {
+width:100%;
+
+}
+
+.home_resize_padding {
+padding-top:100px;
+}
+
+}
+
+.modaling_sizing{
+width:59%;
+}
+
+
+@media screen and (max-width: 768px) {
+.modaling_sizing {
+width:99%;
+
+}
+
+.home_content_head {       
+margin-left:0px; 
+padding-top:10px;
+width:100%;
+text-align:center;
+}
+
+
+}
+
+@media screen and (max-width: 600px) {
+.modaling_sizing {
+width:99%;
+}
+
+.home_content_head {       
+margin-left:0px; 
+padding-top:10px;
+width:100%;
+text-align:center; 
+}
+
+
+
+}
+
+.category_post{
+background-color: #ec5574;
+padding: 6px;
+color:white;
+font-size:14px;
+border-radius: 15%;
+border: none;
+cursor: pointer;
+text-align: center;
+width:100%;
+z-index: -999;
+}
+.category_post:hover {
+background: black;
+color:white;
+}	
+
+
+
+
+
+
+.readmore_btn{
+background-color: #ec5574;
+padding: 6px;
+color:white;
+font-size:14px;
+border-radius: 50%;
+border: none;
+cursor: pointer;
+text-align: center;
+//width:100%;
+z-index: -999;
+}
+.readmore_btn:hover {
+background: black;
+color:white;
+}	
+
+
+
+
+</style>
+
+
+
+<script>
+// set post url
+
+var url_post_data ="http://localhost/microsoft_school_upload/ladies_first/";
+</script>
+
+
+    </head>
+    <body>
+
+ 
+</head>
+<body>
+
+
+
+
+
+
+
+
+<!-- start column nav-->
+
+
+<div class="text-center">
+<nav class="navbar navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navgator">
+        <span class="navbar-header-collapse-color icon-bar"></span>
+        <span class="navbar-header-collapse-color icon-bar"></span>
+        <span class="navbar-header-collapse-color icon-bar"></span> 
+        <span class="navbar-header-collapse-color icon-bar"></span>                       
+      </button>
+     
+<li class="navbar-brand home_click imagelogo_li_remove" ><img class="img-rounded imagelogo_data" src="environment1.jpg"></li>
+    </div>
+    <div class="collapse navbar-collapse" id="navgator">
+
+      <ul class="nav navbar-nav navbar-right">
+
+      
+<li class="navgate_no"><a class='img-circle' title='View Dashboard' href="dashboard_welcome.html" style="border-style: solid; border-width:4px; border-color:orange;color:white;font-size:14px;"><button class="category_post">Back to Dashboard</button></a></li>
+
+
+<li class="navgate">
+
+<span class="dropdown">
+  <a style="color:white;font-size:14px;cursor:pointer;" title='View More Data' class="btn1 btn-default1 dropdown-toggle"  data-toggle="dropdown">
+
+<span class='myd_photo_sess'></span>
+More<span class="caret"></span></a>
+
+<ul class="dropdown-menu">
+<b style='color:black;'>(<span class='myd_fullname_sess'></span>)</b><br><br>
+<li><a title='My Profile' href="profile_base.html"><span style='font-size:30px;color:#ec5574;' class='fa fa-user'></span> My Profile/Posts</a></li><p></p>
+
+
+
+
+
+<li><a title='Logout' href="logout.html"><span style='font-size:30px;color:#ec5574;' class='fa fa-sign-out'></span> Logout</a></li>
+
+</ul></span>
+
+</li>
+
+
+      </ul>
+
+
+
+
+    </div>
+  </div>
+
+
+
+</nav>
+
+
+    </div><br /><br />
+
+<!-- end column nav-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--start right column all-->
+    <div class="right-column-all">
+
+
+
+
+
+<style>
+.post_padding{
+padding-top:90px;
+   
+}
+
+.post_bgcolor{
+background: #dddddd;
+   
+}
+
+
+@media screen and (max-width: 600px) {
+  .post_padding{
+  padding-top:1px; 
+ margin-top:-20px
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .post_padding{
+ padding-top:1px;
+ margin-top:-20px
+  }
+}
+
+
+.postbtn_dashedline{
+  border-bottom: 2px dashed #ec5574;
+
+}
+
+
+.upload_progress{
+padding:10px;
+background:green;
+color:white;
+cursor:pointer;
+min-width:30px;
+}
+
+#imageupload_preview
+{
+max-height:200px;
+max-width:200px;
+}
+
+
+
+</style>
+<!-- all post Section start -->
+<div  class="post_padding section_padding post_bgcolor">
+
+
+<!--start blog post row-->
+ <div class="row">
+
+
+
+<style>
+
+.post-css2{
+background:#ec5574;
+color:white;
+padding: 10px;
+cursor:pointer;
+border:none;
+border-radius:50%;
+}
+
+.post-css2:hover{
+background: orange;
+color:black;
+}
+
+</style>
+
+<div class='col-sm-3'></div>
+
+<div class='col-sm-6'>
+<h4>Private Messages between You and <span class='myd_fullname_sess'></span></h4>
+
+<div style="font-size:16px;color:black;background:white;padding:6px;border-radius:50%;" >
+<center>Send Message to <span class='myd_fullname_sess'></span></center></div><br>
+
+
+
+
+
+<div style="border-style: dashed; border-width:2px; border-color: orange;background:#eeeeee;padding:10px;" class="row">
+
+
+
+
+        
+
+
+<!--start form-->
+
+<script>
+
+$(document).ready(function(){
+$('#msg_btn').click(function(){
+	
+
+var messaging = $("#messaging").val();
+
+var url_content1 = window.location.href;
+var url_p1 = new URL(url_content1);
+var rid = url_p1.searchParams.get("userid");
+var connection_id = url_p1.searchParams.get("id");
+var fullname = url_p1.searchParams.get("fullname");
+
+
+
+var userid_sess_data = localStorage.getItem('useridsessdata');
+var fullname_sess_data = localStorage.getItem('fullnamesessdata');
+var photo_sess_data = localStorage.getItem('photosessdata');
+
+
+if(messaging==""){
+alert('Message cannot be Empty');
+return false;
+}
+
+else{
+$('#loader_l2').fadeIn(400).html('<br><div style="color:black;background:white;padding:10px;"><i class="fa fa-spinner fa-spin" style="font-size:20px"></i> &nbsp;Please Wait, Message is being sent...</div>');
+var datasend = "messaging="+ messaging+'&rid='+rid+'&connection_id='+connection_id+'&userid_sess_data='+userid_sess_data +'&fullname_sess_data='+fullname_sess_data+'&photo_sess_data='+photo_sess_data;
+		
+		$.ajax({
+			
+			type:'POST',
+			url:url_post_data+'message_action.php',
+			data:datasend,
+                        crossDomain: true,
+			cache:false,
+			success:function(msg){
+
+
+
+if(msg == 1){
+alert('Message Successfully Sent..');			
+$('#loader_l2').hide();
+$('#result_l2').html("<div style='color:white;background:green;padding:10px;'>Message Successfully Sent</div>");
+setTimeout(function(){ $('#result_l2').html(''); }, 5000);
+
+// empty form
+$('#messaging').val('');
+
+window.location='message.html?id='+connection_id+'&fullname='+fullname+'&userid='+rid;
+	
+
+		
+}else{
+
+alert('message submission Failed.');			
+$('#loader_l2').hide();
+$('#result_l2').html("<div style='color:white;background:red;padding:10px;'>Message submission Failed</div>");
+setTimeout(function(){ $('#result_l2').html(''); }, 5000);				
+	
+
+}
+
+
+
+
+			
+			}
+			
+		});
+		
+		}
+		
+	})
+					
+});
+
+
+
+
+</script>
+
+
+
+
+
+<div class="col-sm-12 form-group">
+<label>Enter Message</label>
+<textarea  class="form-control contact_input_color" id="messaging" name="messaging" placeholder="Send Message"  required></textarea>
+</div>
+
+
+
+<br>
+
+
+
+
+
+<div class="col-sm-12 form-group">
+                        <div id="loader_l2"></div>
+                        <div id="result_l2"></div>
+</div>
+
+
+<button type="button" id="msg_btn" class="category_post"  /> Send Message</button>
+</div>
+
+
+
+
+
+
+
+<!--end form-->
+
+
+
+</div>
+</div>
+
+
+<div class='col-sm-3'></div>
+
+
+
+
+
+<!--start loading message-->
+
+<script>
+
+$(document).ready(function(){
+
+
+var url_content1 = window.location.href;
+var url_p1 = new URL(url_content1);
+var userid = url_p1.searchParams.get("userid");
+var id = url_p1.searchParams.get("id");
+var fullname = url_p1.searchParams.get("fullname");
+
+
+
+var userid_sess_data = localStorage.getItem('useridsessdata');
+var fullname_sess_data = localStorage.getItem('fullnamesessdata');
+var photo_sess_data = localStorage.getItem('photosessdata');
+
+var tt=1;
+$("#loader_msg").fadeIn(400).html('<br><div style="color:black;background:white;padding:10px;"><i class="fa fa-spinner fa-spin" style="font-size:20px"></i> &nbsp;Please Wait,Loading Your Messages...</div>');
+var datasend = {tt:tt, userid:userid, id:id, fullname:fullname, userid_sess_data:userid_sess_data};
+
+//alert(r_id1);
+	
+		$.ajax({
+			
+			type:'POST',
+			url:url_post_data+'message_load.php',
+			data:datasend,
+                        crossDomain: true,
+			cache:false,
+			success:function(msg){
+
+$("#loader_msg").hide();
+$("#result_msg").html(msg);
+//setTimeout(function(){ $('#result_msg').html(''); }, 5000);				
+	
+}
+			
+		});
+		
+		
+
+});
+
+
+</script>
+
+<div id="loader_msg"></div>
+<div id="result_msg"></div>
+
+
+
+<!--End loading message-->
+
+
+<style>
+
+.map_css{
+background: #ec5574;
+color:white;
+padding:4px;
+cursor:pointer;
+border:none;
+border-radius:10%;
+}
+
+.map_css:hover{
+background: black;
+color:white;
+
+}
+
+
+.map_css1{
+background: green;
+color:white;
+padding:6px;
+cursor:pointer;
+border:none;
+
+}
+
+
+.map_css1:hover{
+background: purple;
+color:white;
+
+}
+
+
+
+
+
+.title_css{
+//background: green;
+color:green;
+cursor:pointer;
+font-size:24px;
+
+}
+
+
+.title_css:hover{
+//background: purple;
+color:purple;
+
+}
+
+
+
+.seeking_css{
+background: purple;
+color:white;
+padding:10px;
+cursor:pointer;
+border:none;
+border-radius:25%;
+font-size:20px;
+}
+
+.seeking_css:hover{
+background: black;
+color:white;
+
+}
+
+
+
+.offering_css{
+background: green;
+color:white;
+padding:10px;
+cursor:pointer;
+border:none;
+border-radius:25%;
+font-size:20px;
+}
+
+.offering_css:hover{
+background: black;
+color:white;
+
+}
+
+</style>
+
+
+
+
+
+
+
+
+</div>
+<!--end blog post row-->
+</div>
+<!--all post section ends-->
+
+
+
+
+
+
+
+
+
+<!-- footer Section start -->
+
+<footer class=" navbar_footer text-center footer_bgcolor">
+
+<div class="row">
+        <div class="col-sm-12">
+
+<p class="footer_text1"><?php echo $header_tit; ?></p>
+<p class="footer_text2"><?php include('footer_title.php'); echo $footer_tit1; ?></p>
+<br>
+
+<p><?php echo $footer_tit2; ?><a class="btn_copyright" href="<?php echo $footer_tit3; ?>"><?php echo $footer_tit3; ?></a></p>
+        </div>
+
+
+
+        </div>
+
+<br/>
+  <p></p>
+</footer>
+
+<!-- footer Section ends -->
+	
+
+
+
+
+<div>
+  <!--end right column all-->    
+
+
+
+
+
+
+
+   
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
